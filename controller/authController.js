@@ -1,5 +1,4 @@
 const User = require(".././model/User");
-const N1 = require(".././model/Course");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -7,16 +6,6 @@ const bcrypt = require("bcrypt");
 let refreshTokenDB = [];
 
 const authController = {
-  getCourse: async (req, res) => {
-    try {
-      const courses = await N1.find();
-
-      res.status(200).json(courses);
-    } catch (error) {
-      console.log("lấy sai đó kìa");
-    }
-  },
-
   registerUser: async (req, res) => {
     try {
       const salt = await bcrypt.genSalt(10);

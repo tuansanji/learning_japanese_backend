@@ -8,11 +8,12 @@ const courseSchema = new mongoose.Schema(
     name: String,
     lesson: String,
     way: String,
+    stage: String,
     level: String,
-
     author: String,
     pathVideo: String,
     thumb: String,
+    timeLine: Number,
   },
   {
     collection: "N1",
@@ -20,4 +21,4 @@ const courseSchema = new mongoose.Schema(
   }
 );
 
-module.exports = dungMoriConnect.model("N1", courseSchema);
+module.exports = dungMoriConnect.model("course", courseSchema);

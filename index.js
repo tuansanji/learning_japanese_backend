@@ -6,8 +6,10 @@ const cookieParser = require("cookie-parser");
 
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
+const courseRoutes = require("./routes/courses");
+
 const app = express();
-const port = 5001;
+const port = 5002;
 
 dotenv.config();
 
@@ -29,5 +31,6 @@ mongoose
 
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
+app.use("/courses", courseRoutes);
 
 app.listen(port, () => console.log(`App listening on port ${port}`));

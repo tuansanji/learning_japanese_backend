@@ -15,6 +15,5 @@ routes.post(
   middlewareController.verifyToken,
   authController.logOutUser
 );
-routes.get("/course", authController.getCourse);
 
 module.exports = routes;
